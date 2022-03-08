@@ -20,7 +20,13 @@ $ npm run start
 ### Docker
 
 ```shell
-docker run -it -p 7001:7001  -v /usr/web/app/public:/local/public -v /usr/web/app/config/manifest.json:/local/public/manifest.json --name demo hocgin/docker-ssr:latest
+docker rm test
+docker run -it \
+ -v /local/public:/usr/web/app/public \
+ -v /local/public/manifest.json:/usr/web/config/manifest.json \
+ -p 7001:7001 \
+ --name test \
+ hocgin/docker-ssr:latest
 ```
 
 ## Q&A

@@ -1,4 +1,15 @@
 #!/bin/zsh
 
-docker build . -t hocgin/ssr:v0.0.1
-# docker run -it -p 7001:7001  -v /usr/web/app/public:/Users/hocgin/Downloads/iii/app/public -v /usr/web/app/config/manifest.json:/Users/hocgin/Downloads/iii/app/public/manifest.json --name test hocgin/ssr:v0.0.1
+docker rmi -f hocgin/docker-ssr:0.0.2
+docker build . -t hocgin/docker-ssr:0.0.2
+
+docker rm test
+docker run -it \
+ -v /Users/hocgin/Downloads/iii/app/public:/usr/web/app/public \
+ -v /Users/hocgin/Downloads/iii/app/public/manifest.json:/usr/web/config/manifest.json \
+ -p 7001:7001 \
+ --name test \
+ hocgin/docker-ssr:0.0.2
+
+
+
