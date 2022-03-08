@@ -4,6 +4,9 @@
 > 用于装载前端项目实现服务端渲染的容器
 
 ## 如何使用
+
+### 项目
+
 ```bash
 # 1. 下载依赖
 $ npm i --production --registry=https://registry.npm.taobao.org
@@ -12,6 +15,12 @@ $ npm i --production --registry=https://registry.npm.taobao.org
 # 4. 启动 web 容器
 $ npm run start
 # 5. 浏览器打开 http://localhost:7001
+```
+
+### Docker
+
+```shell
+docker run -it -p 7001:7001  -v /usr/web/app/public:/local/public -v /usr/web/app/config/manifest.json:/local/public/manifest.json --name demo hocgin/docker-ssr:latest
 ```
 
 ## Q&A
