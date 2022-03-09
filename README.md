@@ -3,6 +3,8 @@
 > Docker image for SSR
 > 用于装载前端项目实现服务端渲染的容器
 
+![Docker Image Version (latest by date)](https://img.shields.io/docker/v/hocgin/docker-ssr?sort=date&style=flat-square)
+
 ## 如何使用
 
 ### 项目
