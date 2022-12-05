@@ -3,7 +3,7 @@ let env = require("./config/env");
 console.log('服务配置', env);
 
 const app = express();
-const port = env.SERVER_PORT ?? 7000;
+const port = env.SERVER_PORT ?? 7001;
 const filepath = env.FILE_PATH ?? __dirname;
 
 app.use(async (req, res, next) => {

@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "node ./boot.js",
-    "start": "cross-env FILE_PATH=/usr/web SERVER_PORT=7000 node ./boot.js"
+    "start": "cross-env FILE_PATH=/usr/web SERVER_PORT=7001 node ./boot.js"
   },
   "engines": {
     "node": ">=10.0.0"
